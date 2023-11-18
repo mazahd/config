@@ -2,6 +2,7 @@ theme = "hex_lavender"
 
 
 [keys.normal.";"]
+x = ":q!"
 w = ":w"
 W = ":wq"
 r = ":config-reload"
