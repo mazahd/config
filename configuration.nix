@@ -17,9 +17,9 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   boot.supportedFilesystems = [ "zfs" ];
+  boot.zfs.devNodes = "/dev/disk/by-path/pci-0000:00:10.0-scsi-0:0:0:0-part2";
   boot.kernelPackages = config.boot.zfs.package.latestCompatibleLinuxPackages;
   networking.hostId = "e9c11c88"; # For example: head -c 8 /etc/machine-id
-  networking.hostName = "nimi"; # Define your hostname.
 
   users.users.root.initialPassword = "xer";
   users.mutableUsers = false;
