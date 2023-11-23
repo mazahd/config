@@ -55,6 +55,7 @@ users.users.root.openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NT
 
   directories = [
     "/var/log"
+    "/etc/nixos"
   ];
 };
 
