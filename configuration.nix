@@ -26,6 +26,26 @@
   
   zramSwap.enable = true;
 
+  services.openssh = {
+  enable = true;
+  openFirewall = true;
+  passwordAuthentication = true;
+  kbdInteractiveAuthentication = false;
+  hostKeys = [
+    {
+      bits = 4096;
+      path = "/persist/etc/ssh/ssh_host_rsa_key";
+      type = "rsa";
+    }
+    {
+      path = "/persist/etc/ssh/ssh_host_ed25519_key";
+      type = "ed25519";
+    }
+  ];
+};
+
+users.users.root.openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKgtiyDGe+vYeazvXepFiKgOqL1KbDdHAmffPe9Lu+uZ radbellatrix@gmail.com" ]
+
   environment.persistence."/persist" = {
   hideMounts = true;
   files = [
@@ -36,6 +56,8 @@
     "/var/log"
   ];
 };
+
+
 
   system.stateVersion = "23.05"; # Did you read the comment?
 
