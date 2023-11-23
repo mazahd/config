@@ -1,3 +1,5 @@
+{
+
 boot = {
   # Set up static IPv4 address in the initrd.
   kernelParams = [ "ip=<ipv4_address>::<ipv4_gateway>:<ipv4_netmask>::<interface>:none" ];
@@ -43,3 +45,5 @@ boot = {
     };
   };
 };
+
+}
