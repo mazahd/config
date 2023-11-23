@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./impermanence/nixos.nix
+      ./initrd.nix
 
     ];
 
@@ -56,6 +57,15 @@ users.users.root.openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NT
     "/var/log"
   ];
 };
+
+
+{
+  environment.systemPackages = with pkgs; [
+    git
+    helix
+    tmux
+  ];
+
 
 
 

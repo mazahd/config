@@ -5,7 +5,7 @@ boot = {
   initrd = {
     # Switch this to your ethernet's kernel module.
     # You can check what module you're currently using by running: lspci -v
-    kernelModules = [ "virtio_pci" ];
+    kernelModules = [ "e1000" ];
 
     network = {
       # This will use udhcp to get an ip address.
@@ -23,7 +23,7 @@ boot = {
         # the keys are copied to initrd from the path specified; multiple keys can be set
         # you can generate any number of host keys using
         # `ssh-keygen -t ed25519 -N "" -f /path/to/ssh_host_ed25519_key`
-        hostKeys = [ /path/to/ssh_host_ed25519_key_initrd ];
+        hostKeys = [ /persist/etc/ed5key ];
         # public ssh key used for login
         authorizedKeys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKgtiyDGe+vYeazvXepFiKgOqL1KbDdHAmffPe9Lu+uZ radbellatrix@gmail.com"];
       };
