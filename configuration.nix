@@ -45,7 +45,7 @@
   ];
 };
 
-users.users.root.openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKgtiyDGe+vYeazvXepFiKgOqL1KbDdHAmffPe9Lu+uZ radbellatrix@gmail.com" ]
+users.users.root.openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKgtiyDGe+vYeazvXepFiKgOqL1KbDdHAmffPe9Lu+uZ radbellatrix@gmail.com" ];
 
   environment.persistence."/persist" = {
   hideMounts = true;
@@ -60,7 +60,6 @@ users.users.root.openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NT
 };
 
 
-{
   environment.systemPackages = with pkgs; [
     git
     helix
